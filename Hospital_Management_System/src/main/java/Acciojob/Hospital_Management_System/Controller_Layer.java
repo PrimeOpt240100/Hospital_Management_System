@@ -1,5 +1,6 @@
 package Acciojob.Hospital_Management_System;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -8,7 +9,8 @@ import java.util.Objects;
 @RestController
 public class Controller_Layer {
 
-    Service_Layer serviceLayerObj = new Service_Layer();
+    @Autowired
+    Service_Layer serviceLayerObj;
 
     @GetMapping("Check API")
     public String check(){
